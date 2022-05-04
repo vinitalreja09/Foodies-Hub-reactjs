@@ -1,0 +1,62 @@
+//----------------------Function for animation--------------------------//
+
+@function getAnimationDuration($duration: number){
+    @return calc($duration * var(--animation-speed));
+}
+//-------------------------Improve Section -----------------------------//
+.improve-section{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+    .col{
+        width: 50%;
+        img{
+            width: 100%;
+        }
+        .titlee{
+            color: var(--text-color);
+            font-size: 2.5em;
+            font-weight: 900;
+            margin-left: 17%;
+            padding-bottom: .5em;
+        }
+        .skills{
+            margin-left: 17%;
+            margin-bottom: .5em;
+            border-left: .2em solid var(--primary-color);
+            padding: .1em 0 .2em .5em;
+            color: var(--text-light);
+            font-weight: bold;
+            transform: translateX(100%);
+            opacity: 0;
+            animation: getAnimationDuration(.5s) slideInRight forwards;
+            @for $i from 2 through 6 {
+                &:nth-child(#{$i}){
+                    animation-delay: #{$i * .1}s;
+                }
+            }
+        }
+        .btn{
+            border: none;
+            outline: none;
+            text-align: center;
+            width: 23%;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.75em 0.75em;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            margin-top: 1.3em;
+            margin-left: 17%;
+            font-weight: bold;
+            border-radius: 3px;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 6px var(--shadow-color);
+            &:hover{
+                box-shadow: 0 1px 3px var(--shadow-color);
+            }   
+        }
+
+    }
+
+}
