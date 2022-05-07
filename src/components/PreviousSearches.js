@@ -21,8 +21,8 @@ export default function PreviousSearches(){
                     Previous Searches
                 </h2>
                 <div className="search-list">
-                    {search_list.map((search,index) => (
-                        <div key="index" className="search-item" style={{animationDelay: index * .07 + "s"}}>
+                    {search_list.map((search,search_id) => (
+                        <div key={search_id} className="search-item" style={{animationDelay: search_id * .07 + "s"}}>
                             {search}
                         </div>
                     ))}

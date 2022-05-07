@@ -25,8 +25,8 @@ export default function Explore(){
                 <button className="btn">Explore</button>
             </div>
             <div className="col gallery">
-                {imgs.map((src, index)=> (
-                    <CustomImage key={index} imgSrc={src} pt={"90%"}/>
+                {imgs.map((src, id)=> (
+                    <CustomImage key={id} imgSrc={src} pt={"90%"}/>
                 ))}
             </div>
         </div>

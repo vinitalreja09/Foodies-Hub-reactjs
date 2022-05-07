@@ -15,8 +15,8 @@ export default function ImproveSection(){
                 <h1 className="titlee">
                     Improve your Culinary skills
                 </h1>
-                {lst.map((item, index) => (
-                    <p className="skills" key={index}>{item}</p>
+                {lst.map((item, _id) => (
+                    <p className="skills" key={_id}>{item}</p>
                 ))}
                 <button className="btn">Signup</button>
             </div>

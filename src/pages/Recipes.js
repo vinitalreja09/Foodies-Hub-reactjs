@@ -63,13 +63,13 @@ export default function Recipes(){
             image: "/img/gallery/img_6.jpg",
             authorImg: "/img/top_chiefs/img_5.jpg",
         }
-    ].sort(() => Math.random() - 0.5)
+    ]
     return(
         <div>
            <PreviousSearches/>
            <div className="recipe-container">
-           {recipes.map((recipe, index) => (
-                    <RecipeCard key={index} recipe={recipe} />
+           {recipes.map((recipe, recipe_id) => (
+                    <RecipeCard key={recipe_id} recipe={recipe} />
                 ))}
             </div> 
         </div>
