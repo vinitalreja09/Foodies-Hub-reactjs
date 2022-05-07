@@ -1,0 +1,58 @@
+//----------------------Function for animation--------------------------//
+
+@function getAnimationDuration($duration: number){
+    @return calc($duration * var(--animation-speed));
+}
+
+//--------------------Previous searches-------------------------//
+.previous-searches{
+    .title{
+        color: var(--text-color);
+        margin-bottom: 1em;
+    }
+    .search-list{
+        .search-item{
+            background-color: var(--primary-color);
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0 1em 1em 0;
+            color: #fff;
+            opacity: 0;
+            border-radius: 30px;
+            box-shadow: 0 3px 6px var(--shadow-color);
+            animation: getAnimationDuration(.3s) slideInRight forwards;
+        }
+    }
+}
+
+//-----------------------Search box-------------------------//
+.search-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1.3em;
+    height: 32px;
+    margin-bottom: 1.8em;
+    input, .btn{
+        height: 100%;
+    }
+    input{
+        min-width: 250px;
+        padding: 0 .5em;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        border: 1px solid #4d4d4d;
+    }
+    .btn{
+        padding-block: 0;
+        padding-inline: .8em;
+        background-color: var(--primary-color);
+        border-radius: 0 5px 5px 0;
+        border: none;
+        outline: none;
+        box-shadow: 0 2px 6px var(--shadow-color);
+    }
+    svg{
+        color: white;
+    }
+}
